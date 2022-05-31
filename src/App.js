@@ -1,15 +1,17 @@
 
 import './App.css';
 
-import Nav from './components/Nav/index'; 
-import About from './components/About/index'; 
+import Nav from './components/Nav'; 
+import About from './components/About'; 
+import Gallery from './components/Gallery';
 
 function App() {
   return (
     <div>
-      <Nav></Nav>
+      <Nav />
       <main>
-        <About></About>
+        <Gallery></Gallery>
+        <About />
       </main>    
     </div>
   );

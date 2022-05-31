@@ -19,6 +19,10 @@ const Nav = () => {
         }
     ]; 
 
+    const categorySelected = (name) => {
+        console.log(`${name} clicked`); 
+    }
+
     return (
         <header>
             <h2>
@@ -37,8 +41,13 @@ const Nav = () => {
                         <span>Contact</span>
                     </li>
                     {categories.map((category) => (
-                        <li className="mx-1" key={category.name}>
-                            <span>{category.name}</span>
+                        <li 
+                        className="mx-1" 
+                        key={category.name}
+                        >
+                            <span onClick={() => categorySelected(category.name)}>
+                                {category.name}
+                            </span>
                         </li>
                     ))}
                 </ul>
